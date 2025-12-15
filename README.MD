@@ -1,9 +1,11 @@
-# Web Crawler for books.toscrape.com  
-School Project Documentation
+# Web Crawler for books.toscrape.com
 
 **Author:** Filip Houdek  
+
 **Contact:** houdekfilip@email.cz
+
 **School:** SPŠE Ječná
+
 **Date:** 24/11/2025
 
 ## 1. Purpose of the Application and User Requirements

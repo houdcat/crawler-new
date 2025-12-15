@@ -1,5 +1,5 @@
 """
-Web Crawler for books.toscrape.com
+Crawler for books.toscrape.com
 """
 import requests
 from bs4 import BeautifulSoup
@@ -301,9 +301,9 @@ def main():
         p.start()
 
     # Collect and process results from workers
-    total_to_crawl = len(book_urls)
+    total_crawl_count = len(book_urls)
 
-    while crawled_count + failed_count < total_to_crawl:
+    while crawled_count + failed_count < total_crawl_count:
         try:
             # Get next result with timeout to prevent hanging
             result = result_queue.get(timeout=30)
@@ -316,7 +316,7 @@ def main():
 
             # Display progress every 10 items
             if (crawled_count + failed_count) % 10 == 0:
-                print(f"    Processed: {crawled_count + failed_count}/{total_to_crawl} "
+                print(f"    Processed: {crawled_count + failed_count}/{total_crawl_count} "
                       f"(Success: {crawled_count}, Failed: {failed_count})")
 
             # Auto-save every 20 books
